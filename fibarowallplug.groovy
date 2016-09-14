@@ -179,9 +179,9 @@ def configure() {
 	log.debug "Send Configuration to device"
 	delayBetween([
     
-        zwave.configurationV1.configurationSet(parameterNumber: 40, size: 1, scaledConfigurationValue: 1).format(),   // Immediate power report. Available settings: 1 - 100 (%). Default 80
-        zwave.configurationV1.configurationSet(parameterNumber: 42, size: 1, scaledConfigurationValue: 1).format(), 	// Standard power reporting. Available settings: 1 - 100 (%). Default 15
-        zwave.configurationV1.configurationSet(parameterNumber: 43, size: 1, scaledConfigurationValue: 3).format(), 	// Standard power reporting frequency. Available settings: 1 - 254 (s) Default 30
+        zwave.configurationV1.configurationSet(parameterNumber: 40, size: 1, scaledConfigurationValue: 80).format(),   // Immediate power report. Available settings: 1 - 100 (%). Default 80
+        zwave.configurationV1.configurationSet(parameterNumber: 42, size: 1, scaledConfigurationValue: 15).format(), 	// Standard power reporting. Available settings: 1 - 100 (%). Default 15
+        zwave.configurationV1.configurationSet(parameterNumber: 43, size: 1, scaledConfigurationValue: 30).format(), 	// Standard power reporting frequency. Available settings: 1 - 254 (s) Default 30
         zwave.associationV1.associationSet(groupingIdentifier:1, nodeId:[zwaveHubNodeId]).format(),
         zwave.associationV1.associationSet(groupingIdentifier:2, nodeId:[zwaveHubNodeId]).format(),
         zwave.associationV1.associationSet(groupingIdentifier:3, nodeId:[zwaveHubNodeId]).format(),
