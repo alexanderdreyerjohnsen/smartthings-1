@@ -16,6 +16,7 @@
 metadata {
 	definition (name: "Fibaro Wall Plug beta", namespace: "cscheiene", author: "SmartThings,gpsmith,cscheiene") {
 		capability "Energy Meter"
+		capability "Power Meter"
 		capability "Actuator"
 		capability "Switch"
 		capability "Configuration"
